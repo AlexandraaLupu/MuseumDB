@@ -27,13 +27,13 @@ On the same database, write the following SQL queries:
 # LAB 3
 
 Write SQL scripts that:
-a. modify the type of a column;
-b. add / remove a column;
-c. add / remove a DEFAULT constraint;
-d. add / remove a primary key;
-e. add / remove a candidate key;
-f. add / remove a foreign key;
-g. create / drop a table.
+- a. modify the type of a column;
+- b. add / remove a column;
+- c. add / remove a DEFAULT constraint;
+- d. add / remove a primary key;
+- e. add / remove a candidate key;
+- f. add / remove a foreign key;
+- g. create / drop a table.
 
 For each of the scripts above, write another one that reverts the operation. Place each script in a stored procedure. Use a simple, intuitive naming convention.  
 
@@ -48,13 +48,14 @@ Work on 3 tables of the form Ta(aid, a2, …), Tb(bid, b2, …), Tc(cid, aid, bi
 - the primary keys are underlined;
 - a2 is UNIQUE in Ta;
 - aid and bid are foreign keys in Tc, referencing the primary keys in Ta and Tb, respectively.  
-a. Write queries on Ta such that their execution plans contain the following operators:
 
+a. Write queries on Ta such that their execution plans contain the following operators:
 - clustered index scan;
 - clustered index seek;
 - nonclustered index scan;
 - nonclustered index seek;
 - key lookup.  
+
 b. Write a query on table Tb with a WHERE clause of the form WHERE b2 = value and analyze its execution plan. Create a nonclustered index that can speed up the query. Examine the execution plan again.
 
 c. Create a view that joins at least 2 tables. Check whether existing indexes are helpful; if not, reassess existing indexes / examine the cardinality of the tables.
