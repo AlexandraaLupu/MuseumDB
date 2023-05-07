@@ -7,10 +7,10 @@ The database must contain at least: 10 tables, two 1:n relationships, one m:n re
 # LAB 2
 On the relational structure created for the first lab, write SQL statements that:
 
-insert data – for at least 4 tables; at least one statement must violate referential integrity constraints;
-update data – for at least 3 tables;
-delete data – for at least 2 tables.
-In the UPDATE / DELETE statements, use at least once: {AND, OR, NOT},  {<,<=,=,>,>=,<> }, IS [NOT] NULL, IN, BETWEEN, LIKE.
+- insert data – for at least 4 tables; at least one statement must violate referential integrity constraints;
+- update data – for at least 3 tables;
+- delete data – for at least 2 tables.
+  In the UPDATE / DELETE statements, use at least once: {AND, OR, NOT},  {<,<=,=,>,>=,<> }, IS [NOT] NULL, IN, BETWEEN, LIKE.
 
 On the same database, write the following SQL queries:
 
@@ -35,26 +35,26 @@ e. add / remove a candidate key;
 f. add / remove a foreign key;
 g. create / drop a table.
 
-For each of the scripts above, write another one that reverts the operation. Place each script in a stored procedure. Use a simple, intuitive naming convention.
+For each of the scripts above, write another one that reverts the operation. Place each script in a stored procedure. Use a simple, intuitive naming convention.  
 
-Create a new table that holds the current version of the database schema. Simplifying assumption: the version is an integer number.
+Create a new table that holds the current version of the database schema. Simplifying assumption: the version is an integer number.  
 
-Write a stored procedure that receives as a parameter a version number and brings the database to that version.
+Write a stored procedure that receives as a parameter a version number and brings the database to that version.  
 
 # LAB 5
 Work on 3 tables of the form Ta(aid, a2, …), Tb(bid, b2, …), Tc(cid, aid, bid, …), where:
 
-aid, bid, cid, a2, b2 are integers;
-the primary keys are underlined;
-a2 is UNIQUE in Ta;
-aid and bid are foreign keys in Tc, referencing the primary keys in Ta and Tb, respectively.
+- aid, bid, cid, a2, b2 are integers;
+- the primary keys are underlined;
+- a2 is UNIQUE in Ta;
+- aid and bid are foreign keys in Tc, referencing the primary keys in Ta and Tb, respectively.  
 a. Write queries on Ta such that their execution plans contain the following operators:
 
-clustered index scan;
-clustered index seek;
-nonclustered index scan;
-nonclustered index seek;
-key lookup.
+- clustered index scan;
+- clustered index seek;
+- nonclustered index scan;
+- nonclustered index seek;
+- key lookup.  
 b. Write a query on table Tb with a WHERE clause of the form WHERE b2 = value and analyze its execution plan. Create a nonclustered index that can speed up the query. Examine the execution plan again.
 
 c. Create a view that joins at least 2 tables. Check whether existing indexes are helpful; if not, reassess existing indexes / examine the cardinality of the tables.
