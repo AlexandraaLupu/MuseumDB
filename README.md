@@ -1,5 +1,5 @@
 # MuseumDB
-I had to create a simple application that requires a database for my Database course at univeristy
+A simple application that requires a database for my Database course at univeristy
 
 # LAB 1
 The database must contain at least: 10 tables, two 1:n relationships, one m:n relationship.
